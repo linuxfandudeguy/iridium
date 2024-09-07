@@ -41,7 +41,7 @@ Iridium is a simple and flexible framework for creating websites using TypeScrip
    import { renderComponent } from './iridium-js/src/framework';
 
    const App = () => {
-     return <div>Hello, Iridium without importing React!</div>;
+     return <div>Hello, Iridium!</div>;
    };
 
    renderComponent('root', <App />);

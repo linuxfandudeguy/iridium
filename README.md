@@ -1,5 +1,5 @@
 
-# iridium
+# Iridium
 
 Iridium is a simple and flexible framework for creating websites using TypeScript and JSX syntax. Follow the steps below to set up, customize, and deploy your project.
 
@@ -41,7 +41,7 @@ Iridium is a simple and flexible framework for creating websites using TypeScrip
    import { renderComponent } from './iridium-js/src/framework';
 
    const App = () => {
-     return <div>Hello, Iridium!</div>;
+     return <div>Hello, Iridium without importing React!</div>;
    };
 
    renderComponent('root', <App />);
@@ -64,6 +64,14 @@ Iridium is a simple and flexible framework for creating websites using TypeScrip
      color: #666;
    }
    ```
+
+   **Note:** If you are using an external CSS file, make sure to include it in `src/index.html`. For example:
+
+   ```html
+   <link rel="stylesheet" href="styles.css">
+   ```
+
+   If the CSS is included directly within your components, you do not need to mention it in `src/index.html`.
 
 ## Running the App
 
@@ -92,4 +100,3 @@ After building, publish the `dist` directory to any web hosting service of your 
 - **Terser**: Optimizes the bundled JavaScript files for better performance.
 
 Happy coding with Iridium!
-g users get started with Iridium.

@@ -5,3 +5,4 @@
   <circle cx="100" cy="100" r="50" fill="none" stroke="#8DD6F8" stroke-width="10" />
   <path d="M100,50 L115,70 L140,60 L130,85 L150,100 L130,115 L140,140 L115,130 L100,150 L85,130 L60,140 L70,115 L50,100 L70,85 L60,60 L85,70 Z" fill="none" stroke="#8DD6F8" stroke-width="5" />
 
+</svg>

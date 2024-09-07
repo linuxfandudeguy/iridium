@@ -5,31 +5,27 @@ Iridium is a simple and flexible framework for creating websites using TypeScrip
 
 ## Setup
 
-1. **Install Iridium Globally**
+1. **Clone the Iridium Repository**
+
+   The global `iridium` package for initializing projects is now deprecated. To start a new project, use the following command:
 
    ```bash
-   npm install -g iridium
+   git clone https://github.com/linuxfandudeguy/iridium.git
    ```
 
-2. **Initialize Your Project**
+2. **Navigate to Your Project Directory**
 
    ```bash
-   iridium init
+   cd iridium
    ```
 
-3. **Navigate to Your Project Directory**
-
-   ```bash
-   cd package
-   ```
-
-4. **Install TypeScript Types for React and ReactDOM**
+3. **Install TypeScript Types for React and ReactDOM**
 
    ```bash
    npm install @types/react @types/react-dom --force
    ```
 
-5. **Edit `src/index.tsx`**
+4. **Edit `src/index.tsx`**
 
    Customize the `src/index.tsx` file to change the content of your website. Here's an example of what this file might look like:
 
@@ -37,6 +33,8 @@ Iridium is a simple and flexible framework for creating websites using TypeScrip
    // @ts-ignore
    // Here you can modify this file in order to make your website.
    // IMPORTANT: Please do not remove the `ts-ignore` comment.
+
+   import './styles.css';  // CSS can be imported directly into the file
 
    import { renderComponent } from './iridium-js/src/framework';
 
@@ -47,7 +45,7 @@ Iridium is a simple and flexible framework for creating websites using TypeScrip
    renderComponent('root', <App />);
    ```
 
-6. **Edit `src/styles.css`**
+5. **Edit `src/styles.css`**
 
    Modify the `src/styles.css` file to adjust the look and feel of your website. Here’s an example of some basic CSS:
 
@@ -65,13 +63,21 @@ Iridium is a simple and flexible framework for creating websites using TypeScrip
    }
    ```
 
-   **Note:** If you are using an external CSS file, make sure to include it in `src/index.html`. For example:
+   **Note:** There are two ways to include CSS:
 
-   ```html
-   <link rel="stylesheet" href="styles.css">
-   ```
+   - **Direct Import**: You can import the `styles.css` file directly in your TypeScript/JSX file like this:
 
-   If the CSS is included directly within your components, you do not need to mention it in `src/index.html`.
+     ```tsx
+     import './styles.css';
+     ```
+
+   - **External CSS**: If you prefer using external CSS files, include them in `src/index.html`:
+
+     ```html
+     <link rel="stylesheet" href="styles.css">
+     ```
+
+   If the CSS is included directly in your components, no need to add it to `src/index.html`.
 
 ## Running the App
 
@@ -99,4 +105,3 @@ After building, publish the `dist` directory to any web hosting service of your 
 - **Webpack**: Bundles the website's files and assets.
 - **Terser**: Optimizes the bundled JavaScript files for better performance.
 
-Happy coding with Iridium!
